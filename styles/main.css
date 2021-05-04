@@ -1,0 +1,20 @@
+@import "details.css";
+
+
+
+.flexbox {
+    display: flex;
+}
+.choices {
+    font-size: medium;
+}
+.customOrders {
+    font-size: large;
+}
+section {
+    width: 30%;
+}
+ul {
+    list-style-type: none;
+    padding-inline-start: 0.25rem;
+}

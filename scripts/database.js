@@ -50,9 +50,27 @@ const database = {
     },{
         id: 4,
         type: "18-inch Pair Spoke Black"
-    }]
+    }],
+    //for storing chosen options
+    orderBuilder: {},
+    
     }
 
+    //responible for setting the state
+    export const setPaintColor = (id) => {
+        database.orderBuilder.paintColorId = id
+    }
+    export const setInterior = (id) => {
+        database.orderBuilder.interiorId = id
+    }
+    export const setTechnology = (id) => {
+        database.orderBuilder.technologyId = id
+    }
+    export const setWheel = (id) => {
+        database.orderBuilder.wheelId = id
+    }
+
+    // this is responsible for exporting objects in arrays.
     export const getPaintColors = () => {
         return [...database.paintColors]
     }
@@ -66,3 +84,16 @@ const database = {
         return [...database.wheels]
     }
 
+export const addCustomOrder = () => {
+    const newOrder = {...database.orderBuilder}
+
+    newOrder.id = [...database.customOrders].pop().id + 1
+    
+    newOrder.timestamp = Date.now()
+    
+    database.customOrders.push(newOrder)
+    
+    database.orderBuilder = {}
+    
+    document.dispatchEvent(new CustomEvent("stateChanged"))
+}
