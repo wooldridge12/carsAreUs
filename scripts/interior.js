@@ -1,3 +1,5 @@
+//This page is for; creating the change eventListener for the radio button list in the black boxes on the DOM for Interior page. This is repeated in 3 other modules.
+
 import { setInterior, getInteriors } from "./database.js"
 
 

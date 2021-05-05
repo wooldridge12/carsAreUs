@@ -1,6 +1,22 @@
+/*This page is for; customizing background, colors and margins of classes or ids */
 
 
+.title {
+    margin-left: 29%;
+    margin-top: 2rem;
+    margin-bottom: 10px;
+    font-size: 6rem;
+}
 
+.littleTitle {
+    margin-left: 20%;
+    font-size: 20px;
+    margin-bottom: 4rem;
+}
+
+.fixFont {
+    font-family: 'Girassol', cursive;
+}
 
 .regularTextInBoxes {
     flex-basis: 24%;
@@ -11,4 +27,44 @@
     box-shadow: 0.25rem 0.25rem 0.5rem rgb(143, 143, 143);
     background-color: black;
     color:cornflowerblue;  
+}
+
+body {
+    background-image: url("https://cdn.wallpapersafari.com/8/17/ictgJL.jpg");
+    background-size: 100%;
+    color: aliceblue;
+}
+
+button {
+    margin-left: 43%;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem; 
+    padding: 0.5rem;
+    background-color: dodgerblue;
+    color: balck;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+}
+
+.highLights {
+    margin-left: 14rem;
+}
+
+.textOfWords {
+    margin-left: 4rem;
+}
+
+.orderNumber {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.moneyHighLight {
+    color: rgb(2, 161, 2);
+    margin-left: 14rem;
+}
+
+.textSizeOfSelections {
+    font-family: 'Inconsolata', monospace;
+    font-size: 2rem;
+    text-decoration: underline;
 }

@@ -1,3 +1,5 @@
+//This page is for; creating the change eventListener for the radio button list in the black boxes on the DOM for wheels page.
+
 import { setWheel, getWheels } from "./database.js"
 
 
