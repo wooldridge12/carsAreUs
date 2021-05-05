@@ -1,4 +1,4 @@
-//This page is for;
+//This page is for; The data obviously! Also it creates the set() and get() functions for import and export data. 
 
 const database = {
     paintColors: [{
