@@ -1,56 +1,83 @@
+//This page is for;
+
 const database = {
     paintColors: [{
         id: 1,
-        color: "Silver"
+        color: "Silver",
+        price: 299.79
     },{
         id: 2,
-        color: "Midnight Blue"
+        color: "Midnight Blue",
+        price: 899.89
     },{
         id: 3,
-        color: "FireBrick Red"
+        color: "FireBrick Red",
+        price: 599.36
     },{
         id: 4,
-        color: "Spring Green"
+        color: "Spring Green",
+        price: 449.99
     }],
     interiors: [{
         id: 1,
-        type: "Beige Fabric"
+        type: "Beige Fabric",
+        price: 387.99
     },{
         id: 2,
-        type: "Charcoal Fabric"
+        type: "Charcoal Fabric",
+        price: 399.99
     },{
         id: 3,
-        type: "White Leather"
+        type: "White Leather",
+        price: 799.99
     },{
         id: 4,
-        type: "Black Leather"
+        type: "Black Leather",
+        price: 699.99
     }],
     technologies: [{
         id: 1,
-        type: "Basic Package"
+        type: "Basic Package",
+        price: 0
     },{     
         id: 2,
-        type: "Navigation Package"
+        type: "Navigation Package",
+        price: 1229.89
    },{
          id: 3,
-         type: "Visilbility Package"
+         type: "Visilbility Package",
+         price: 899.99
     },{           
          id: 4,
-         type: "Ultra Package"
+         type: "Ultra Package",
+         price: 3999.99
         }],
     wheels: [{
         id: 1,
-        type: "17-inch Pair Radial"
+        type: "17-inch Pair Radial",
+        price: 149.99
     },{
         id: 2,
-    type    : "17-inch Pair Radial Black"
+        type: "17-inch Pair Radial Black",
+        price: 199.99
     },{
         id: 3,
-        type: "18-inch Pair Spoke Silver"
+        type: "18-inch Pair Spoke Silver",
+        price: 499.99
     },{
         id: 4,
-        type: "18-inch Pair Spoke Black"
+        type: "18-inch Pair Spoke Black",
+        price: 549.99
     }],
+    customOrders: [
+        {
+            id: 1,
+            paintColorId: 2,
+            interiorId: 1,
+            technologyId: 2,
+            wheelId: 1
+        }
+    ],
     //for storing chosen options
     orderBuilder: {},
     
@@ -82,6 +109,9 @@ const database = {
     }
     export const getWheels = () => {
         return [...database.wheels]
+    }
+    export const getOrders = () => {
+        return [...database.customOrders]
     }
 
 export const addCustomOrder = () => {

@@ -1,3 +1,5 @@
+//This page is for; rendering the HTML or displaying it to the DOM. which you can tell by the index.html stating the id of container.
+
 import { carsRUs } from "./carsRUs.js"
 
 
@@ -10,3 +12,9 @@ const renderAllHTML = () => {
 
 
 renderAllHTML()
+
+
+document.addEventListener("stateChanged", event => {
+    console.log("State of data has changed. Regenerating HTML...")
+    renderAllHTML()
+})
