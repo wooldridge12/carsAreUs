@@ -6,7 +6,8 @@ import { technologySelection } from "./Technology.js"
 import { wheelStyles } from "./wheels.js"
 import { addCustomOrder } from "./database.js"
 import { orders } from "./orders.js"
- 
+import { selectedCatagory } from "./Catagory.js"
+
 
 //This is the main button on the page that you click and it calls for addCustomerOrder() and spits out a order recept at the bottom.
 document.addEventListener(
@@ -46,6 +47,11 @@ export const carsRUs = () => {
         <section class="choices__wheels regularTextInBoxes">
             <h2 class="textSizeOfSelections">Wheels<h2>
             ${wheelStyles()}
+        </section>
+        
+        <section class="choices__catagory regularTextInBoxees">
+            <h2 class="textSizeOfSelections">Catagory</h2>
+        ${selectedCatagory()}
         </section>
         </article>
         
