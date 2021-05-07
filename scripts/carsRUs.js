@@ -49,7 +49,7 @@ export const carsRUs = () => {
             ${wheelStyles()}
         </section>
         
-        <section class="choices__catagory regularTextInBoxees">
+        <section class="choices__catagory regularTextInBoxes">
             <h2 class="textSizeOfSelections">Catagory</h2>
         ${selectedCatagory()}
         </section>
