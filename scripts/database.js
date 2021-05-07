@@ -69,13 +69,18 @@ const database = {
         type: "18-inch Pair Spoke Black",
         price: 549.99
     }],
+    catagories: [ {id: 1, type: "car"},
+                {id: 2, type: "suv"},
+                {id: 3, type: "truck"}
+              ],
     customOrders: [
         {
             id: 1,
             paintColorId: 2,
             interiorId: 1,
             technologyId: 2,
-            wheelId: 1
+            wheelId: 1,
+            catagoryId: 1
         }
     ],
     //for storing chosen options
@@ -96,6 +101,9 @@ const database = {
     export const setWheel = (id) => {
         database.orderBuilder.wheelId = id
     }
+    export const setCatagory = (id) => {
+        database.orderBuilder.catagoryId = id
+    }
 
     // this is responsible for exporting objects in arrays.
     export const getPaintColors = () => {
@@ -112,6 +120,9 @@ const database = {
     }
     export const getOrders = () => {
         return [...database.customOrders]
+    }
+    export const getCatagories = () => {
+        return [...database.catagories]
     }
 
 export const addCustomOrder = () => {
